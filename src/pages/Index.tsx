@@ -24,11 +24,8 @@ const Index = () => {
     { name: "ChatGPT", level: 92, category: "AI TOOLS" },
     { name: "Deepseek", level: 80, category: "AI TOOLS" },
     { name: "GitHub Copilot", level: 88, category: "AI TOOLS" },
-    { name: "Tabnine", level: 80, category: "AI TOOLS" },
-    { name: "Hugging Face", level: 85, category: "AI TOOLS" },
     { name: "PyTorch", level: 80, category: "AI TOOLS" },
     { name: "TensorFlow", level: 75, category: "AI TOOLS" },
-    { name: "Apache MXNet", level: 70, category: "AI TOOLS" },
     { name: "Microsoft Azure AI platform", level: 80, category: "AI TOOLS" },
     { name: "OpenAI Codex", level: 80, category: "AI TOOLS" },
   ];
