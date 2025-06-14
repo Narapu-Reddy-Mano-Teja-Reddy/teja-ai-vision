@@ -1,4 +1,3 @@
-
 import {
   ArrowRight, Download, ExternalLink, Github, Linkedin, Mail, Phone, Award, Code, Database, Brain, Briefcase, GraduationCap, Trophy, Target, Zap
 } from "lucide-react";
@@ -30,11 +29,6 @@ const Index = () => {
     { name: "ChatGPT", level: 92, category: "AI TOOLS" },
     { name: "Deepseek", level: 80, category: "AI TOOLS" },
     { name: "GitHub Copilot", level: 88, category: "AI TOOLS" },
-    { name: "PyTorch", level: 80, category: "AI TOOLS" },
-    { name: "TensorFlow", level: 75, category: "AI TOOLS" },
-    { name: "Microsoft Azure AI platform", level: 80, category: "AI TOOLS" },
-    { name: "OpenAI Codex", level: 80, category: "AI TOOLS" },
-    { name: "BE 10X Generative AI (LetsUpgrade)", level: 85, category: "AI TOOLS" },
   ];
   const projects = [
     {
