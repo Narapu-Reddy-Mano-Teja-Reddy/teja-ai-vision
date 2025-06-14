@@ -1,4 +1,3 @@
-
 import { ArrowRight, Download, ExternalLink, Github, Linkedin, Mail, Phone, Award, Code, Database, Brain, Briefcase, GraduationCap, Trophy, Target, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -20,8 +19,18 @@ const Index = () => {
     { name: "OpenCV", level: 78, category: "AI/ML" },
     { name: "Power BI", level: 82, category: "Analytics" },
     { name: "Excel", level: 88, category: "Analytics" },
-    // Example, you can add tools below as needed
-    // { name: "ChatGPT", level: 80, category: "AI TOOLS" }
+    // AI Tools
+    { name: "Cursor", level: 80, category: "AI TOOLS" },
+    { name: "ChatGPT", level: 92, category: "AI TOOLS" },
+    { name: "Deepseek", level: 80, category: "AI TOOLS" },
+    { name: "GitHub Copilot", level: 88, category: "AI TOOLS" },
+    { name: "Tabnine", level: 80, category: "AI TOOLS" },
+    { name: "Hugging Face", level: 85, category: "AI TOOLS" },
+    { name: "PyTorch", level: 80, category: "AI TOOLS" },
+    { name: "TensorFlow", level: 75, category: "AI TOOLS" },
+    { name: "Apache MXNet", level: 70, category: "AI TOOLS" },
+    { name: "Microsoft Azure AI platform", level: 80, category: "AI TOOLS" },
+    { name: "OpenAI Codex", level: 80, category: "AI TOOLS" },
   ];
 
   const projects = [
@@ -514,4 +523,3 @@ const Index = () => {
 };
 
 export default Index;
-
