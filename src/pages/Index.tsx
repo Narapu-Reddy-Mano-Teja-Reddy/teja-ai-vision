@@ -28,6 +28,7 @@ const Index = () => {
     { name: "TensorFlow", level: 75, category: "AI TOOLS" },
     { name: "Microsoft Azure AI platform", level: 80, category: "AI TOOLS" },
     { name: "OpenAI Codex", level: 80, category: "AI TOOLS" },
+    { name: "BE 10X Generative AI (LetsUpgrade)", level: 85, category: "AI TOOLS" },
   ];
 
   const projects = [
@@ -76,7 +77,9 @@ const Index = () => {
     "Generative AI Fundamentals",
     "Data Science with Python",
     "Full Stack Web Development",
-    "Java Language Certified by Mind Luster"
+    "Java Language Certified by Mind Luster",
+    "Python course from Udemy",
+    "Java course from Mind Luster"
   ];
 
   const scrollToSection = (sectionId: string) => {
