@@ -19,7 +19,9 @@ const Index = () => {
     { name: "TensorFlow", level: 75, category: "AI/ML" },
     { name: "OpenCV", level: 78, category: "AI/ML" },
     { name: "Power BI", level: 82, category: "Analytics" },
-    { name: "Excel", level: 88, category: "Analytics" }
+    { name: "Excel", level: 88, category: "Analytics" },
+    // Example, you can add tools below as needed
+    // { name: "ChatGPT", level: 80, category: "AI TOOLS" }
   ];
 
   const projects = [
@@ -43,6 +45,14 @@ const Index = () => {
       tech: ["React.js", "Node.js", "Python", "MySQL"],
       achievement: "🚀 Startup Founder",
       impact: "Building scalable AI solutions for businesses"
+    },
+    {
+      title: "Teertharaksha",
+      description: "A senior citizen temple planner to simplify spiritual journeys for elders. Visit the project: ",
+      tech: ["React.js", "AI Tools", "Planning", "Web"],
+      achievement: "🌐 Live Project",
+      impact: "Helps senior citizens plan temple visits and spiritual trips with ease.",
+      link: "https://lnkd.in/e33dbDPT"
     },
     {
       title: "College Hackathon Leadership",
@@ -235,10 +245,20 @@ const Index = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto font-inter">
               A comprehensive skill set spanning frontend development, backend systems, databases, and cutting-edge AI technologies
             </p>
+            {/* Enlarged profile image */}
+            <div className="flex justify-center mt-10 mb-0">
+              <div className="w-56 h-56 rounded-full overflow-hidden border-4 border-cyan-400 shadow-xl shadow-cyan-400/40">
+                <img 
+                  src="/lovable-uploads/da5af4b9-ad12-496a-bf47-ed4c65822148.png" 
+                  alt="Mano Teja Reddy" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {['Frontend', 'Backend', 'Database', 'AI/ML', 'Programming', 'Analytics'].map((category) => (
+            {['Frontend', 'Backend', 'Database', 'AI/ML', 'Programming', 'Analytics', 'AI TOOLS'].map((category) => (
               <Card key={category} className="hover:shadow-lg transition-shadow bg-gray-800 border-gray-600">
                 <CardHeader>
                   <CardTitle className="flex items-center text-white font-rajdhani">
@@ -248,20 +268,25 @@ const Index = () => {
                     {category === 'AI/ML' && <Brain className="h-5 w-5 mr-2 text-purple-400" />}
                     {category === 'Programming' && <Code className="h-5 w-5 mr-2 text-red-400" />}
                     {category === 'Analytics' && <Award className="h-5 w-5 mr-2 text-yellow-400" />}
+                    {category === 'AI TOOLS' && <Zap className="h-5 w-5 mr-2 text-blue-400" />}
                     {category}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
-                    {skills.filter(skill => skill.category === category).map((skill) => (
-                      <div key={skill.name}>
-                        <div className="flex justify-between mb-2">
-                          <span className="text-sm font-medium text-gray-300 font-inter">{skill.name}</span>
-                          <span className="text-sm text-gray-400">{skill.level}%</span>
+                    {skills.filter(skill => skill.category === category).length === 0 && category === "AI TOOLS" ? (
+                      <div className="text-gray-400 text-center font-inter text-sm italic">Coming soon</div>
+                    ) : (
+                      skills.filter(skill => skill.category === category).map((skill) => (
+                        <div key={skill.name}>
+                          <div className="flex justify-between mb-2">
+                            <span className="text-sm font-medium text-gray-300 font-inter">{skill.name}</span>
+                            <span className="text-sm text-gray-400">{skill.level}%</span>
+                          </div>
+                          <Progress value={skill.level} className="h-2" />
                         </div>
-                        <Progress value={skill.level} className="h-2" />
-                      </div>
-                    ))}
+                      ))
+                    )}
                   </div>
                 </CardContent>
               </Card>
@@ -299,7 +324,13 @@ const Index = () => {
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <CardTitle className="text-xl text-white font-rajdhani">{project.title}</CardTitle>
-                    <ExternalLink className="h-5 w-5 text-gray-400 hover:text-cyan-400 cursor-pointer" />
+                    {project.link ? (
+                      <a href={project.link} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-5 w-5 text-gray-400 hover:text-cyan-400 cursor-pointer" />
+                      </a>
+                    ) : (
+                      <ExternalLink className="h-5 w-5 text-gray-400" />
+                    )}
                   </div>
                   <Badge variant="outline" className="w-fit text-green-400 border-green-400">
                     {project.achievement}
@@ -308,6 +339,18 @@ const Index = () => {
                 <CardContent>
                   <CardDescription className="text-gray-300 mb-4 leading-relaxed font-inter">
                     {project.description}
+                    {project.link && (
+                      <>
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-cyan-400 underline ml-1 break-all"
+                        >
+                          {project.link}
+                        </a>
+                      </>
+                    )}
                   </CardDescription>
                   <div className="mb-4">
                     <p className="text-sm font-medium text-white mb-2 font-rajdhani">Impact:</p>
@@ -471,3 +514,4 @@ const Index = () => {
 };
 
 export default Index;
+
